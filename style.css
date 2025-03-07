@@ -1,0 +1,231 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark Mode (Default) */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1C1C1C;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Light Mode */
+.light-mode {
+    background: #F8F8F8;
+}
+
+/* Container */
+.container {
+    width: 320px;
+    background: #121212;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Light Mode Container */
+.light-mode .container {
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    gap: 8px;
+}
+
+/* Theme Icons */
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    fill: #D4D4D2; /* Changed to light gray for better visibility in dark mode */
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Light Mode Icons */
+.light-mode .theme-icon {
+    fill: black;
+}
+
+/* Theme Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+/* Hide Default Checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: 0.4s;
+    border-radius: 22px;
+}
+
+/* Slider Handle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Checked (Light Mode) */
+input:checked + .slider {
+    background-color: #34C759;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* Display */
+.display input {
+    width: 100%;
+    text-align: right;
+    font-size: 34px; /* Reduced font weight for better readability */
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 15px;
+    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+/* Light Mode Display */
+.light-mode .display input {
+    color: black;
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 15px;
+}
+
+/* Buttons */
+button {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 600; /* Reduced font weight for number buttons */
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #323232;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Animation */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Click Animation */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Operator Buttons */
+.operator {
+    background: #FF9500;
+    box-shadow: 0px 3px 6px rgba(255, 149, 0, 0.4);
+}
+
+/* Hover effect for operators */
+.operator:hover {
+    background: #E68900;
+}
+
+/* Equal Button (Now Blue in Dark Mode) */
+.equal {
+    background: #007AFF;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 10px rgba(0, 122, 255, 0.4);
+}
+
+/* Hover Effect */
+.equal:hover {
+    background: #005ecb;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 122, 255, 0.5);
+}
+
+/* Click Effect */
+.equal:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 6px rgba(0, 122, 255, 0.3);
+}
+
+/* Light Mode Buttons */
+.light-mode button {
+    background: #D4D4D2;
+    color: black;
+}
+
+/* Light Mode Operator */
+.light-mode .operator {
+    background: #FFA500;
+}
+
+/* Light Mode Equal (Changed to Green) */
+.light-mode .equal {
+    background: #34C759;
+    box-shadow: 0px 3px 10px rgba(52, 199, 89, 0.4);
+}
+
+/* Light Mode Equal Hover */
+.light-mode .equal:hover {
+    background: #2FAA50;
+    box-shadow: 0px 4px 12px rgba(52, 199, 89, 0.5);
+}
+
+/* Light Mode Equal Click */
+.light-mode .equal:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 6px rgba(52, 199, 89, 0.3);
+}
