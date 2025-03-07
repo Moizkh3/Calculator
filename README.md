@@ -31,7 +31,7 @@ A **modern, minimalistic calculator** with a **dark and light mode** toggle, bui
 ## 🔧 Setup & Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/modern-calculator.git
+   git clone https://github.com/Moizkh3/Calculator.git
    ```
 2. Open `index.html` in a browser.
 3. Toggle between **dark mode (🌙)** and **light mode (☀️)** using the switch at the top-right.
